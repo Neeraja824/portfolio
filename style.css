@@ -74,7 +74,7 @@ section{
 }
 span{
     color: var(--main-color);
-}  
+}
 .home-content h1{
     font-size: 5.6rem;
     font-weight: 700;
@@ -282,8 +282,9 @@ span{
 }
 .portfolio-container{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    align-items: center;
+    grid-template-columns: repeat(3, 40rem);
+    justify-content: center;
+    align-items: start;
     gap: 2rem;
     margin-top: 10rem;
 }
@@ -293,9 +294,13 @@ span{
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
+    width: 40rem;
+    height: 28rem;
 }
 .portfolio-box img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: .5s ease;
     opacity: 0.7;
 }
@@ -338,9 +343,9 @@ span{
     border-radius: 50%;
 }
 .portfolio-layer i {
-    background: #fff;         
-    border-radius: 50%;      
-    padding: 1rem;     
+    background: #fff;
+    border-radius: 50%;
+    padding: 1rem;
     font-size: 2rem;
     color: var(--main-color);
 }
@@ -364,7 +369,7 @@ span{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    max-width: 1400px;   
+    max-width: 1400px;
     margin: 0 auto;
 }
 .certification-box {
@@ -395,7 +400,7 @@ span{
     flex-direction: column;
     text-align: center;
     padding: 0 2rem;
-    transform: translateY(100%); 
+    transform: translateY(100%);
     transition: transform 0.5s ease;
 }
 .certification-layer.show {
@@ -449,7 +454,7 @@ span{
     margin-bottom: 1.5rem;
 }
 .contact form .input-box input,
-.contact form  textarea{
+.contact form textarea{
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
@@ -495,7 +500,6 @@ span{
     font-size: 2.4rem;
     color: var(--snd-bg-color);
 }
-/*Breakpoints*/
 @media(max-width: 1200px){
     html{
         font-size: 55%;
@@ -505,28 +509,31 @@ span{
     }
 }
 @media(max-width: 991px){
-   .header{
-    padding: 2rem 3%;
-   }
-   section{
-    padding: 10rem 3%;
-   }
-   .services{
-    padding: 7rem;
-   }
-   .portfolio{
-    padding-bottom: 7rem;
-   }
-   .certifications-container {
+    .header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3%;
+    }
+    .services{
+        padding: 7rem;
+    }
+    .portfolio{
+        padding-bottom: 7rem;
+    }
+    .portfolio-container{
+        grid-template-columns: repeat(2, 40rem);
+    }
+    .certifications-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
-   .contact{
-    min-height: auto;
-   }
-   .footer{
-    padding: 2rem 3%;
-   }
+    .contact{
+        min-height: auto;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
 }
 @media(max-width: 768px){
     #menu-icon{
@@ -574,7 +581,6 @@ span{
     .about-img img{
         width: 20vw;
         margin-left: -50px;
-
     }
     .services h2{
         margin-bottom: 3rem;
@@ -583,12 +589,12 @@ span{
         margin-bottom: 3rem;
     }
     .portfolio-container{
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 40rem);
     }
 }
 @media(max-width: 617px){
     .portfolio-container{
-        grid-template-columns: 1fr;
+        grid-template-columns: 40rem;
     }
     .home-img img{
         width: 80vw;
